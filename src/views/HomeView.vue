@@ -17,8 +17,8 @@ function setAuthMode(mode) {
 
 <template>
   <header class="flex flex-col">
-    <h1 class="text-5xl md:text-6xl text-center"> TODO APP</h1>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+    <h1 class="text-5xl md:text-6xl"> TODO APP</h1>
+    <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
 
     <div class="wrapper">
       <!-- <HelloWorld msg="You did it!" /> -->

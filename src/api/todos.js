@@ -11,11 +11,11 @@ export async function fetchTodos(page) {
   return data;
 }
 
-export async function createNewTodo(newTodo) {
-  const { data } = await axios.post("https://jsonplaceholder.typicode.com/todos", newTodo);
+// export async function createNewTodo(newTodo) {
+//   const { data } = await axios.post("https://jsonplaceholder.typicode.com/todos", newTodo);
 
-  return data;
-}
+//   return data;
+// }
 
 export async function deleteTodo(id) {
   await axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`, {});
