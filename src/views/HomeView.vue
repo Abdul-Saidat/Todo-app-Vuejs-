@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue';
-import { RouterLink } from 'vue-router'
+// import { RouterLink } from 'vue-router'
 // import HelloWorld from './components/HelloWorld.vue'
 import AuthModal from '../components/AuthModal.vue';
 import SignIn from '../components/SignIn.vue';
@@ -27,7 +27,7 @@ function setAuthMode(mode) {
         <!-- i will have my sign up and sign in buttons here, when they are clicked and the
          modal shows, it will route to /todos -->
         <!-- <RouterLink to="/">Home</RouterLink> -->
-        <RouterLink to="/about">About</RouterLink>
+        <!-- <RouterLink to="/about">About</RouterLink> -->
       </nav>
     </div>
     <div>
