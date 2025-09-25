@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { isAuthenticated } from '../../utils/storage'
 import HomeView from '../views/HomeView.vue'
+import TodosPage from '@/views/TodosPage.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,6 +19,16 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/AboutView.vue'),
     },
+    {
+      path: '/todos',
+      name: 'TodosPage',
+      component: TodosPage,
+      beforeEnter: () => {
+        if(!isAuthenticated.value) {
+          return '/'
+        }
+      }
+    }
   ],
 })
 

@@ -1,3 +1,7 @@
+<!-- routes, content of a route -->
+
+
+
 <template>
   <div class="about">
     <h1>This is an about page</h1>
