@@ -5,7 +5,7 @@
 const props = defineProps({
   onclose: {
     type: Function,
-    required: true
+    required: false
   }
 })
 

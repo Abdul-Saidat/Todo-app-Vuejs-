@@ -1,11 +1,14 @@
 <script setup>
 import { ref, onMounted, computed } from 'vue'
+import axios from 'axios';
 import { fetchTodos } from '@/api/todos';
 import AuthModal from '@/components/AuthModal.vue';
 import CreateTodo from '@/components/CreateTodo.vue';
 import { useTodoStore } from '../../utils/todostore';
 import TodoDetail from '@/components/TodoDetail.vue';
+// import DeleteTodo from '@/components/DeleteTodo.vue';
 // import { title } from 'process';
+import { Icon } from '@iconify/vue';
 const authmode = ref(null);
 
 function setAuthMode(mode) {
@@ -45,6 +48,17 @@ const allTodos = computed(() => {
   return [...store.todos, ...todos.value]
 } )
 
+
+async function onDelete (id) {
+  try {
+   await axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+  store.todos = store.todos.filter((t) => t.id !== id)
+  todos.value = todos.value.filter((t) => t.id !== id)
+  } catch (error) {
+    console.error(error)
+  }
+}
+
 onMounted(loadTodos)
 </script>
 
@@ -63,6 +77,7 @@ onMounted(loadTodos)
   <ul v-else>
     <li v-for="todo in allTodos" :key="todo.id">
       <span @click="openModal(todo)" class="text-white cursor-pointer"> {{ todo.title }}</span>
+     <Icon @click="() => onDelete(todo.id)" icon="mdi:trash-can" class="text-red-500 cursor-pointer" />
     </li>
   </ul>
 
