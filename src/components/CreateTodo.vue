@@ -53,15 +53,15 @@ store.addTodo(newTodo)
 <template>
   <div class="px-4 py-4">
     <header>
-      <h1 class="text-xl font-semibold">Create Todo</h1>
+      <h1 class="text-xl font-semibold text-center">Create New Todo</h1>
     </header>
     <div>
 
       <form @submit.prevent="onSubmit" class="py-3">
-        <label for="text" class="block font-semibold mb-0.5">Title</label>
+        <label for="text" class="block font-semibold mb-0.5">Title:</label>
         <input class=" border rounded-md w-full max-w-sm mb-3 px-3 text-black"
          v-model="text" type="text" required>
-        <label class="block mb-0.5 font-semibold" for="id">Id</label>
+        <label class="block mb-0.5 font-semibold" for="id">ID:</label>
         <input class="border rounded-md w-full max-w-sm px-3 text-black"
           v-model="id" type="number" required>
         <button class="px-5 py-1 mt-8 border rounded-md cursor-pointer bg-slate-600 hover:bg-slate-700 text-white"

@@ -12,7 +12,7 @@ const loading = ref(false);
 const email = ref('')
 const password = ref('')
 
- async function onSubmit (){
+async function onSubmit() {
   loading.value = true;
   try {
     // console.log(data);
@@ -36,19 +36,23 @@ const password = ref('')
 
 
 <template>
-  <div class="px-4 py-4">
+  <div class="px-4 py-5">
     <header>
       <h1 class="text-xl font-semibold">Sign Up</h1>
     </header>
 
     <form @submit.prevent="onSubmit" class="py-3">
-      <label for="email" class="block font-semibold mb-0.5">Email</label>
-      <input class=" border rounded-md w-full max-w-sm mb-3 px-3 text-black"
-       v-model="email" type="email" required>
-      <label class="block mb-0.5 font-semibold" for="password">Password</label>
-      <input class="border rounded-md w-full max-w-sm px-3 text-black"
-        v-model="password" type="password" required>
-      <button class="px-5 py-1 mt-8 border rounded-md cursor-pointer bg-slate-600 hover:bg-slate-700 text-white"
+      <div class="mt-2 mb-1">
+
+        <label for="email" class="block font-semibold mb-0.5">Email:</label>
+        <input class=" border rounded-md w-full max-w-sm mb-3 px-3 text-black" v-model="email" type="email" required>
+      </div>
+      <div>
+
+        <label class="block mb-0.5 font-semibold" for="password">Password:</label>
+        <input class="border rounded-md w-full max-w-sm px-3 text-black" v-model="password" type="password" required>
+      </div>
+      <button class="px-5 py-1 mt-4  border rounded-md cursor-pointer bg-slate-600 hover:bg-slate-700 text-white"
         type="submit"> {{ loading ? "Creating account" : "Sign up" }} </button>
 
     </form>

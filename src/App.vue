@@ -1,6 +1,6 @@
 <script setup>
 // import { ref } from 'vue';
-import { RouterLink } from 'vue-router'
+// import { RouterLink } from 'vue-router'
 // import HelloWorld from './components/HelloWorld.vue'
 // import AuthModal from './components/AuthModal.vue';
 // import SignIn from './components/SignIn.vue';
@@ -18,30 +18,30 @@ import { RouterLink } from 'vue-router'
 <!-- I will have my landing page here -->
 
 <template>
-  <header class="flex flex-col">
+  <!-- <header class="flex flex-col"> -->
     <!-- <h1 class="text-5xl md:text-6xl text-center"> TODO APP</h1> -->
     <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" /> -->
 
     <!-- <div class="wrapper"> -->
-      <HelloWorld msg="You did it!" />
+      <!-- <HelloWorld msg="You did it!" /> -->
 
-      <nav>
+      <!-- <nav> -->
         <!-- i will have my sign up and sign in buttons here, when they are clicked and the
          modal shows, it will route to /todos -->
-        <RouterLink to="/">Home</RouterLink>
+        <!-- <RouterLink to="/">Home</RouterLink> -->
         <!-- <RouterLink to="/about">About</RouterLink> -->
-      </nav>
+      <!-- </nav> -->
     <!-- </div> -->
-    <div>
+    <!-- <div> -->
 
-    </div>
-  </header>
+    <!-- </div>
+  </header> -->
 
 
   <RouterView />
 </template>
 
-<style scoped>
+<!-- <style scoped> -->
 header {
   line-height: 1.5;
   max-height: 100vh;
@@ -103,4 +103,4 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
-</style>
+<!-- </style> -->

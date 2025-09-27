@@ -13,5 +13,5 @@ async function onDelete (id) {
 </script>
 
 <template>
-<Icon @click="onDelete(todo.id)" icon="mdi:trash-can" class="text-red-500 cursor-pointer" />
+<Icon @click="onDelete(todo.id)" icon="mdi:trash-can" class="text-red-500 text-4xl cursor-pointer" />
 </template>
